@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags and CSS links -->
+    <title>Sidebar Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+      
+  <style>
+    html{
+        scroll-behavior: smooth;
+    }
+    .active{
+        background-color: aliceblue;
+        color: rgb(60, 60, 165);
+    }
+</style>
+  </head>
+  
+
+  <body>
+    <!-- Sidebar navigation -->
+    <div id="sidebar-section" class="h-screen fixed">
+      <div
+        id="sidebar"
+        class="fixed h-screen top-0 left-0 bg-slate-800 w-20 hover:w-72 duration-200"
+      >
+        <nav role="navigation" class="pl-4 pt-8 mt-4">
+          <div class="mt-4 relative overflow-hidden">
+            <h1 class="name text-white fixed top-0 left-0 text-lg">Tutorend</h1>
+
+            <ul class="nav-list space-y-8" id="nav-list">
+              <li class="nav-item text-xl active p-2 rounded-l-xl text-white">
+                <a href="#home" class="flex gap-5">
+                  <i class="fa-solid fa-house fa-2x"></i>
+                  Home
+                </a>
+              </li>
+              <li class="nav-item text-xl p-2 rounded-l-xl text-white">
+                <a href="#about" class="flex gap-5">
+                  <i class="fa-solid fa-user fa-2x"></i>
+                  About
+                </a>
+              </li>
+              <li class="nav-item text-xl p-2 rounded-l-xl text-white">
+                <a href="#service" class="flex gap-5">
+                  <i class="fa-solid fa-toolbox fa-2x"></i>
+                  Service
+                </a>
+              </li>
+              <li class="nav-item text-xl p-2 rounded-l-xl text-white">
+                <a href="#contact" class="flex gap-5">
+                  <i class="fa-solid fa-at fa-2x"></i>
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Main content area -->
+    <div id="content" class="md:ml-24">
+      <div id="home" class="bg-red-400 h-screen flex justify-center">
+        <h1 class="m-auto text-4xl">Home</h1>
+      </div>
+
+      <div id="about" class="bg-blue-400 h-screen flex justify-center">
+        <h1 class="m-auto text-4xl">about</h1>
+      </div>
+
+      <div id="service" class="bg-yellow-400 h-screen flex justify-center">
+        <h1 class="m-auto text-4xl">service</h1>
+      </div>
+
+      <div id="contact" class="bg-pink-400 h-screen flex justify-center">
+        <h1 class="m-auto text-4xl">contact</h1>
+      </div>
+    </div>
+
+    <script>
+      var navList = document.getElementById("nav-list");
+      var items = navList.getElementsByClassName("nav-item ");
+
+      for (var i = 0; i < items.length; i++) {
+        items[i].addEventListener("click", function () {
+          var current = document.querySelectorAll(".active");
+
+          current.forEach((element) => {
+            element.classList.remove("active");
+          });
+
+          this.classList.add("active");
+        });
+      }
+    </script>
+  </body>
+</html>
