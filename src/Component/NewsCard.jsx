@@ -60,9 +60,10 @@ const NewsCard = ({related}) => {
        
          <div className='overflow-auto h-300px'>
           
-           <div className='flex gap-2  my-3' key={post?.id}>
-             <div className='news-box3 w-28 h-24 relative overflow-hidden  bg-no-repeat'>
-                        <img className='transition duration-300 ease-in-out hover:scale-110' src={imageUrl} alt={post.title} />
+           <div className='flex gap-2 flex-col my-3' key={post?.id}>
+             <div className=''>
+            
+                        <img className='transition duration-300 ease-in-out hover:scale-110 w-[280px] ' src={imageUrl} alt={post.title} /> 
 </div>
             <h2 className='text-[10px] font-bold justify-center items-center'>{post.title}</h2>
            
@@ -80,7 +81,7 @@ const NewsCard = ({related}) => {
    
    
 
-    <div className="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-4 xl:grid-cols-4 xl:gap-8">
+    {/* <div className="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-4 xl:grid-cols-4 xl:gap-8">
    
       <div  class="flex flex-col overflow-hidden rounded-lg border bg-white">
         <a href="#" class="group relative block h-48 overflow-hidden bg-gray-100 md:h-64">
@@ -114,7 +115,8 @@ const NewsCard = ({related}) => {
      
       
       
-    </div></div>
+    </div> */}
+    </div>
   </div>
 </div>
     </div>

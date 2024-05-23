@@ -39,7 +39,6 @@ const RightThird = ({allposts}) => {
 
   return (
     <div>
-      {/* <div className='col-span-3 col-span-2 w-full md:col-span-3 bg-[#D9D9D9]'> */}
 
 
 <div className=' '>
@@ -60,51 +59,6 @@ const RightThird = ({allposts}) => {
       })}
     </div>
  
-{/* <Link to='/news'>
-  <div className='flex justify-center items-center gap-2'>
-    <div className='w-[100px] h-[40px]'>
-      <img src={car2} alt="car" />
-
-    </div>
-    <h1 className="text-[12px] font-bold">কায়রো থেকে মরুভূমিতে রাজধানী সরিয়ে নিচ্ছে মিসর</h1>
-  </div></Link>
-
-
-  <Link to='/news'>
-  <div className='flex justify-center items-center gap-2'>
-    <div className='w-[100px] h-[40px] '>
-       <img src={car3} alt="car" />
-
-    </div>
-    <h1 className="text-[12px] font-bold">কায়রো থেকে মরুভূমিতে রাজধানী সরিয়ে নিচ্ছে মিসর</h1>
-  </div></Link>
-
-  <Link to='/news'>
-  <div className='flex justify-center items-center gap-2'>
-    <div className='w-[100px] h-[40px] '>
-       <img src={car4} alt="car" />
-
-    </div>
-    <h1 className="text-[12px] font-bold">কায়রো থেকে মরুভূমিতে রাজধানী সরিয়ে নিচ্ছে মিসর</h1>
-  </div></Link>
-
-  <Link to='/news'>
-  <div className='flex justify-center items-center gap-2'>
-    <div className='w-[100px] h-[40px] '>
-       <img src={car5} alt="car" />
-
-    </div>
-    <h1 className="text-[12px] font-bold">কায়রো থেকে মরুভূমিতে রাজধানী সরিয়ে নিচ্ছে মিসর</h1>
-  </div></Link>
-
-  <Link to='/news'>
-  <div className='flex justify-center items-center gap-2'>
-    <div className='w-[100px] h-[40px] '>
-       <img src={car2} alt="car" />
-
-    </div>
-    <h1 className="text-[12px] font-bold">কায়রো থেকে মরুভূমিতে রাজধানী সরিয়ে নিচ্ছে মিসর</h1>
-  </div></Link> */}
 
 
 
