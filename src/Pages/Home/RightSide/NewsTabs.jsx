@@ -5,11 +5,11 @@ const NewsTabs = () => {
   const [activeTab, setActiveTab] = useState(1);
 
   return (
-    <div className="bg-[#D9D9D9] w-[100%] h-[490px]">
+    <div className="shadow-xl w-[100%] h-[490px]">
       <div className="flex ">
         <button
           className={`px-3 py-2 ${
-            activeTab === 1 ? 'bg-[#BDBDBD] text-black' : 'bg-[#D9D9D9]'
+            activeTab === 1 ? 'shadow-lg text-black' : 'shadow-xl'
           }`}
           onClick={() => setActiveTab(1)}
         >
@@ -17,7 +17,7 @@ const NewsTabs = () => {
         </button>
         <button
           className={`px-3 py-2 ${
-            activeTab === 2 ? 'bg-[#BDBDBD] text-black' : 'bg-[#D9D9D9]'
+            activeTab === 2 ? 'shadow-lg text-black' : 'shadow-xl'
           }`}
           onClick={() => setActiveTab(2)}
         >
@@ -26,7 +26,7 @@ const NewsTabs = () => {
       </div>
       <div
         className="mt-4 h-96 overflow-y-scroll"
-        style={{ background: activeTab === 1 ? '#BDBDBD' : '#D9D9D9' }}
+        // style={{ background: activeTab === 1 ? '#BDBDBD' : '#D9D9D9' }}
       >
         {activeTab === 1 && (
           <div className="p-4">
@@ -39,7 +39,7 @@ const NewsTabs = () => {
           </div>
         )}
       </div>
-      <div className='bg-[#BDBDBD] w-full mt-4 h-8'>
+      <div className='shadow-lg w-full mt-4 h-8'>
 <h1 className=' text-center p-1 font-bold'>আজকের সব খবর</h1>
       </div>
     </div>

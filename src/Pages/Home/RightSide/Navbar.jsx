@@ -11,7 +11,7 @@ const Navbar = () => {
 
     useEffect(() => {
         // Replace 'your-api-endpoint' with your actual API endpoint
-        fetch('https://desh365.top/api/all-category')
+        fetch('http://desh365.top/api/all-category')
             .then(response => response.json())
             .then(data => {
                 const extractedCategories = data.data.map(category => ({

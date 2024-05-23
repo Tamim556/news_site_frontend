@@ -6,8 +6,56 @@ import NewsDiv2 from './RightSide/NewsDiv2'
 import RightThird from './RightSide/RightThird'
 
 import NewsTabs from './RightSide/NewsTabs'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 const Home = () => {
+
+  // Fetch Data
+   // Fetch Data
+   const [allposts, setPosts] = useState([]);
+   // console.log(posts)
+   
+ 
+ 
+ 
+   useEffect(() => {
+     const fetchPosts = async () => {
+       try {
+         const response = await axios.get('http://desh365.top/api/all-post');
+         setPosts(response.data.data);
+       } catch (error) {
+         console.error('Error fetching the posts:', error);
+       }
+     };
+ 
+     fetchPosts();
+   }, []);
+ 
+  console.log(allposts)
+
+
+//   const [postsid, setPostsid] = useState([]);
+// useEffect(() => {
+//     const fetchPosts = async () => {
+//         try {
+//             const response = await axios.get('https://desh365.top/api/all-post');
+//             // Extracting only IDs from the response data
+//             const postIds = response.data.map(post => post.id);
+//             setPostsid(postIds);
+//         } catch (error) {
+//             console.error('Error fetching the posts:', error);
+//         }
+//     };
+
+//     fetchPosts();
+// }, []);
+// console.log(postsid)
+
+
+
+
+
   return (
     <div>
       <div className='grid md:grid-cols-12 md:mx-10 ml-4 gap-6 lg:grid-cols-12 grid-cols-1'>
@@ -37,7 +85,7 @@ const Home = () => {
             <div className='md:col-span-3  col-span-1 px-2 h-[404px] w-[100%] mt-4 shadow-lg'>
 
 
-              <RightThird />
+              <RightThird allposts={allposts} />
 
             </div>
 

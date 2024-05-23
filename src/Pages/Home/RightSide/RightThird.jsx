@@ -6,12 +6,15 @@ import { Link } from 'react-router-dom';
 // import car4 from '../../../assets/Images/car4.jpg'
 // import car5 from '../../../assets/Images/car6.jpg'
 // import { Link } from 'react-router-dom'
-const RightThird = () => {
+const RightThird = ({allposts}) => {
+  console.log(allposts.id)
 
 
   // Fetch Data
   const [posts, setPosts] = useState([]);
   // console.log(posts)
+
+  
   
 
 
@@ -19,8 +22,7 @@ const RightThird = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        // const imageBaseUrl = 'https://desh365.top/public/storage/post-image/';
-        const response = await axios.get('https://desh365.top/api/all-post');
+        const response = await axios.get('http://admin.desh365.top/api/all-post');
         setPosts(response.data.data);
       } catch (error) {
         console.error('Error fetching the posts:', error);
@@ -44,7 +46,7 @@ const RightThird = () => {
 
 <div className=' flex flex-col space-y-4 gap-3 py-4'>
 {posts.map(post => {
-        const imageUrl = `https://desh365.top/public/storage/post-image/${post.image}`;
+        const imageUrl = `http://desh365.top/public/storage/post-image/${post.image}`;
         
         return (
          <Link to={`/details/${post?.id}`}>

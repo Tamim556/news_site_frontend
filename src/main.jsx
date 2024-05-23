@@ -27,16 +27,11 @@ const router = createBrowserRouter([
         
 
       },
-      // {
-      //   path : '/details/:id',
-      //   element:  <SecondHomePage/>,
-      //   loader : ()=>  fetch('https://desh365.top/api/all-post')
-        
-      // },
+   
       {
         path : '/details/:id',
         element:  <DetailPage/>,
-        loader : ()=>  fetch('https://desh365.top/api/all-post')
+        loader : ()=>  fetch('http://admin.desh365.top/api/all-post')
         
       },
     ]

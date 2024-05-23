@@ -8,7 +8,7 @@ const NewsTabScroll = () => {
     return (
       <div>
           <div>
-                <div className='w-full py-3 flex flex-col bg-[#D9D9D9] gap-6'>
+                <div className='w-full py-3 flex flex-col gap-6'>
                   <div className='flex gap-2'>
                     <div className='news-box3 relative overflow-hidden  bg-no-repeat'>
                     <img className='transition duration-300 ease-in-out hover:scale-110' src={car1} alt="car" />

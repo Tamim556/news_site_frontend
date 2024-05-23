@@ -10,18 +10,18 @@ import NewsCard from '../../Component/NewsCard';
 import PostBody from '../../Component/PostBody';
 import NewsTypeOne from '../../Component/CustomComponent/NewsTypeOne';
 
-const SecondHomePage = ({ related , postData }) => {
+const Page1 = ({ data }) => {
 
 
   
 
 
 
-  // if (!postData) {
-  //   return <div>Loading...</div>; // Or any fallback content
-  // }
+  if (!data) {
+    return <div>Loading...</div>; // Or any fallback content
+  }
 
-  const imageUrl = `http://admin.desh365.top/public/storage/post-image/${postData?.image}`;
+  const imageUrl = `http://desh365.top/public/storage/post-image/${data?.image}`;
 
 
   return (
@@ -37,15 +37,14 @@ const SecondHomePage = ({ related , postData }) => {
 
           <div className='grid md:grid-cols-8 grid-cols-1 gap-6'>
             <div className='md:col-span-5 col-span-1'>
-              
               <h1 className="box-text1 md:block sm:text-center md:text-start my-2 text-sm md:text-xl lg:text-2xl mt-3">
-                {postData?.title}
+                {data?.title}
               </h1>
               <img className='w-[400px] h-[350px]' src={imageUrl} alt="" />
 
               <div className="flex items-center justify-center my-3 w-auto h-auto font-bold bg-[#D9D9D9]">ADD</div>
 
-              {/* <PostBody postBody={postData.post_body} /> */}
+              <PostBody postBody={data.post_body} />
 
 
               {/* <PostBody htmlContent={data.post_body} /> */}
@@ -66,11 +65,11 @@ const SecondHomePage = ({ related , postData }) => {
 
       <div className='grid md:grid-cols-12 md:mx-10 mx-2 mt-3 gap-6 lg:grid-cols-12 grid-cols-1'>
         <div className='col-span-12'>
-          <NewsCard related={related} />
+          <NewsCard />
         </div>
       </div>
     </div>
   );
 }
 
-export default SecondHomePage;
+export default Page1;
