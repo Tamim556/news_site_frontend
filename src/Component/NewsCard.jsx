@@ -23,7 +23,7 @@ const NewsCard = ({related}) => {
     return <div>Loading...</div>; // Or any fallback content
   }
 
-  const imageUrl = `http://admin.desh365.top/public/storage/post-image/${related?.image}`;
+  const imageUrl = `https://admin.desh365.top/public/storage/post-image/${related?.image}`;
   return (
 <div className='mt-5 mb-5'>
     <div className=' px-1 py-3 '>
@@ -54,7 +54,7 @@ const NewsCard = ({related}) => {
 
 <div className='grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-4 xl:grid-cols-4 xl:gap-8'>
 {related.map(post => {
-        const imageUrl = `http://desh365.top/public/storage/post-image/${post.image}`;
+        const imageUrl = `https://admin.desh365.top/public/storage/post-image/${post.image}`;
         
         return (
        

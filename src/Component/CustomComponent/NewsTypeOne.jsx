@@ -44,7 +44,7 @@ const NewsTypeOne = () => {
 
 
                   {posts.map(post => {
-        const imageUrl = `http://admin.desh365.top/public/storage/post-image/${post.image}`;
+        const imageUrl = `https://admin.desh365.top/public/storage/post-image/${post.image}`;
         
         return (
        

@@ -22,7 +22,7 @@ const Home = () => {
    useEffect(() => {
      const fetchPosts = async () => {
        try {
-         const response = await axios.get('http://desh365.top/api/all-post');
+         const response = await axios.get('https://admin.desh365.top/api/all-post');
          setPosts(response.data.data);
        } catch (error) {
          console.error('Error fetching the posts:', error);
@@ -32,7 +32,7 @@ const Home = () => {
      fetchPosts();
    }, []);
  
-  console.log(allposts)
+  console.log('tamim')
 
 
 //   const [postsid, setPostsid] = useState([]);
