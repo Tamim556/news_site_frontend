@@ -11,8 +11,8 @@ const RightThird = () => {
 
   // Fetch Data
   const [posts, setPosts] = useState([]);
-  console.log(posts
-  )
+  // console.log(posts)
+  
 
 
 
@@ -50,7 +50,7 @@ const RightThird = () => {
          <Link to={`/details/${post?.id}`}>
           <div className='flex gap-2' key={post?.id}>
                         <img className='w-24 h-24' src={imageUrl} alt={post.title} />
-<h1>{post.id}</h1>
+
             <h2>{post.title}</h2>
           </div>
           </Link>
