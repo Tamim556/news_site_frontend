@@ -1,4 +1,3 @@
-import React from 'react'
 import Leftside from './Leftside/Leftside'
 import Add from '../Home/RightSide/Add'
 import SorbocchoPothito from '../../Component/SorbocchoPothito'
@@ -8,15 +7,30 @@ import v1 from '../../assets/Images/v1.jpg'
 import NewsCard from '../../Component/NewsCard'
 // import { useLoaderData } from 'react-router-dom'
 
-const SecondHomePage = ({data}) => {
+const SecondHomePage = ({data , posts}) => {
   const imageUrl = `https://desh365.top/public/storage/post-image/${data?.image}`;
-  const removeTags = (str) => {
-    if ((str === null) || (str === ''))
-      return false;
-    else
-      str = str.toString();
-    return str.replace(/<[^>]*>/g, '');
-  }
+  console.log(data)
+  // const removeTags = (str) => {
+  //   if ((str === null) || (str === ''))
+  //     return false;
+  //   else
+  //     str = str.toString();
+  //     return str.replace(/<(?!img)[^>]*>/g, '');
+
+
+
+  // }
+
+//   const [posts, setPosts] = useState([]);
+//   useEffect(() => {
+//     // Fetch the data from the API endpoint
+//     fetch('https://desh365.top/api/all-post')
+//         .then(response => response.json())
+//         .then(data => {
+//             setPosts(data.data);
+//         })
+//         .catch(error => console.error('Error fetching data: ', error));
+// }, []);
 
 
   console.log(data)
@@ -44,7 +58,34 @@ const SecondHomePage = ({data}) => {
               <div className="flex items-center justify-center my-3 w-auto h-auto  font-bold bg-[#D9D9D9]">ADD</div>
 
               <p className='text-[14px] w-[100%] '>
-              {removeTags(data.post_body)}
+                {posts.title}
+              {/* <div>
+            {posts.map(post => (
+                <div key={post.id}>
+                    <h2>{post.title}</h2>
+                    <p>{post.post_body.replace(/<[^>]+>/g, '')}</p>
+                    {post.image && (
+                        <img
+                            src={`path_to_your_image_directory/${post.image}`}
+                            alt={post.title}
+                            style={{ maxWidth: '100%' }}
+                        />
+                    )}
+                </div>
+            ))}
+        </div> */}
+     
+        {/* {post.image && (
+                        <img
+                            src={`https://desh365.top/public/storage/post-image/${post.image}`}
+                            alt={post.title}
+                            style={{ maxWidth: '100%' }}
+                        />
+                    )} */}
+
+
+
+
               </p>
               
 

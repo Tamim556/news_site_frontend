@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+
 import SecondHomePage from '../SecondHomePage/SecondHomePage'
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom"
@@ -25,7 +26,8 @@ const DetailPage = () => {
         
         setData(findDetails)
     }, [details,id])
-    
+
+    console.log(data.title)
 
     
 
@@ -33,7 +35,7 @@ const DetailPage = () => {
     <div>
        
        {/* <SecondHome detail ={detail}></SecodHom> */}
-       <SecondHomePage data ={data}></SecondHomePage>
+       <SecondHomePage data ={data}  ></SecondHomePage>
        
 
     </div>

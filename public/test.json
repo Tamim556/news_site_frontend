@@ -1,0 +1,24 @@
+{
+    "status": true,
+    "message": "All posts get successfully!",
+    "data": [
+        {
+            "id": 4,
+            "category_id": 2,
+            "short_url": "post/abccccccc",
+            "title": "abccccccc",
+            "post_body": "<p>plssmcsjmsaspla&nbsp;<img src=\"https://static01.nyt.com/images/2020/07/21/autossell/sports-reboot-promo-still/sports-reboot-promo-still-superJumbo.jpg\" style=\"width: 663px;\"></p>"
+            
+        },
+       
+       
+        {
+            "id": 1,
+            "category_id": 2,
+            "short_url": "post/dufuyhdbfcdsfcsdf",
+            "title": "dufuyhdbfcdsfcsdf",
+            "post_body": "<p>plssmcsjmsaspla&nbsp;<img src=\"https://static01.nyt.com/images/2020/07/21/autossell/sports-reboot-promo-still/sports-reboot-promo-still-superJumbo.jpg\" style=\"width: 663px;\"></p>"
+           
+        }
+    ]
+}
