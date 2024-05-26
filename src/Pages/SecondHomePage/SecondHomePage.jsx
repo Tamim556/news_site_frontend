@@ -7,13 +7,20 @@ import NewsTabs from '../Home/RightSide/NewsTabs';
 import NewsCard from '../../Component/NewsCard';
 import PostBody from '../../Component/PostBody';
 import NewsTypeOne from '../../Component/CustomComponent/NewsTypeOne';
+import ClipLoader from "react-spinners/ClipLoader";
+import Loader from '../../Component/Loader/Loader';
 
 const SecondHomePage = ({ related, postData }) => {
   if (!postData) {
-    return <div>Loading...</div>; // Or any fallback content
+    return <div className='text-center'> 
+    <Loader/>
+    </div> // Or any fallback content
   }
 
   const imageUrl = `https://admin.desh365.top/public/storage/post-image/${postData.image}`;
+
+
+  
 
   return (
     <div className="container mx-auto">
@@ -39,10 +46,10 @@ const SecondHomePage = ({ related, postData }) => {
 
               <div className="flex items-center justify-center my-3 mx-auto w-[50%] h-[250px] font-bold bg-[#D9D9D9]">ADD</div>
 
-              <Add />
+             
             </div>
             <div className="md:col-span-3 col-span-1">
-              <NewsTypeOne />
+              <Add />
               <div className="w-[100%] ml-1">
                 <NewsTabs />
               </div>

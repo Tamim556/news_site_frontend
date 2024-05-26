@@ -12,13 +12,7 @@ const RightThird = ({allposts}) => {
 
   // Fetch Data
   const [posts, setPosts] = useState([]);
-  // console.log(posts)
-
-  
-  
-
-
-
+ 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
@@ -41,9 +35,9 @@ const RightThird = ({allposts}) => {
     <div>
 
 
-<div className=' '>
+<div className='shadow-xl w-[100%] mt-4 h-[390px] overflow-x-scroll '>
 
-<div className=' flex flex-col space-y-4 gap-3 py-4'>
+<div className=' flex  flex-col space-y-4 gap-3 py-4'>
 {posts.map(post => {
         const imageUrl = `https://admin.desh365.top/public/storage/post-image/${post.image}`;
         
