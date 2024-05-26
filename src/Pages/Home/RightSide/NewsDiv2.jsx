@@ -2,7 +2,7 @@ import a2 from '../../../assets/Images/a2.jpg'
 import a3 from '../../../assets/Images/a3.jpg'
 import a4 from '../../../assets/Images/a4.jpg'
 import a5 from '../../../assets/Images/a5.jpg'
-const NewsDiv2 = () => {
+const NewsDiv2 = ({posts}) => {
     return (
       <div>
           <div>

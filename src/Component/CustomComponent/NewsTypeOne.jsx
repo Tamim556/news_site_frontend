@@ -11,7 +11,7 @@ const NewsTypeOne = () => {
    const reloadPageWithDelay = () => {
     setTimeout(() => {
       window.location.reload();
-    }, 1000); // 2 seconds delay
+    }, 1000); 
   };
  
  
@@ -27,6 +27,8 @@ const NewsTypeOne = () => {
  
      fetchPosts();
    }, []);
+
+   
  
     return (
       <div>
