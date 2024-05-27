@@ -24,11 +24,11 @@ const NewsCard = ({ related }) => {
     return <div className='text-center'> Loading...</div>; // Or any fallback content
   }
 
-  const imageUrl = `https://admin.desh365.top/public/storage/post-image/${related?.image}`;
+  // const imageUrl = `https://admin.desh365.top/public/storage/post-image/${related?.image}`;
 
 
-  const postUrl = "https://www.facebook.com/sharer/sharer.php?u=https://example.com/my-post";
-  const postTitle = "My awesome post";
+  // const postUrl = "https://www.facebook.com/sharer/sharer.php?u=https://example.com/my-post";
+  // const postTitle = "My awesome post";
 
 
   return (
@@ -63,10 +63,7 @@ const NewsCard = ({ related }) => {
                   </div>
                   </Link>
                   <hr />
-                  <div class="">
-                    <ShareIcons url={postUrl} title={postTitle} />
-
-                  </div>
+                 
                 </div>
 
 

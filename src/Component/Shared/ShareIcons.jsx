@@ -3,7 +3,12 @@ import { RiFacebookBoxFill } from "react-icons/ri";
 import { FaTwitter } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-const ShareIcons = ({ url, title }) => {
+import { Link } from 'react-router-dom';
+const ShareIcons = ({ description, url, title }) => {
+
+ 
+
+  
   const shareOnFacebook = () => {
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
   };
@@ -22,18 +27,18 @@ const ShareIcons = ({ url, title }) => {
   return (
     <div className='gap-3 flex'>
         <h1>Share </h1>
-      <button onClick={shareOnFacebook}>
+      <Link onClick={shareOnFacebook}>
       <RiFacebookBoxFill size={32} style={{ color: '#4284ed' }} />
-      </button>
-      <button onClick={shareOnTwitter}>
+      </Link>
+      <Link onClick={shareOnTwitter}>
       <FaTwitter size={31} style={{ color: '#4284ed' }} />
-      </button>
-      <button onClick={shareOnLinkedIn}>
+      </Link>
+      <Link onClick={shareOnLinkedIn}>
       <FaLinkedin size={32} style={{ color: '#1b3fe0' }}/>
-      </button>
-      <button onClick={shareOnYouTube}>
+      </Link>
+      <Link onClick={shareOnYouTube}>
       <FaYoutube size={32} style={{ color: '#e61232' }}/>
-      </button>
+      </Link>
     </div>
   );
 };
