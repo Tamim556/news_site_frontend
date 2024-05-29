@@ -1,30 +1,40 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Leftside from './Leftside/Leftside';
 import Add from '../Home/RightSide/Add';
 import NewsTabs from '../Home/RightSide/NewsTabs';
 import NewsCard from '../../Component/NewsCard';
 import PostBody from '../../Component/PostBody';
 import Loader from '../../Component/Loader/Loader';
-import { FacebookShareButton, FacebookIcon } from "react-share";
-import { Helmet } from 'react-helmet-async';
+import { FacebookShareButton, FacebookIcon } from 'react-share';
 import FacebookSDK from '../../Component/FacebookSdk';
 
 const SecondHomePage = ({ related, postData }) => {
   if (!postData) {
-    return <div className='text-center'>
-      <Loader />
-    </div>;
+    return (
+      <div className="text-center">
+        <Loader />
+      </div>
+    );
   }
 
   const imageUrl = `https://admin.desh365.top/public/storage/post-image/${postData.image}`;
   const url = `https://desh365.top/details/${postData.id}`;
-  const logoFillColor = "white";
+  const logoFillColor = 'white';
+
+  // console.log('postData:', postData);
+  console.log('imageUrl:', imageUrl);
+  console.log('url:', url);
 
   return (
     <div>
       <Helmet>
-        <title>News Portal Details Page</title>
+        <title>{postData.title}</title>
+        <meta property="og:title" content={postData.title} />
+        <meta property="og:description" content={postData.post_body.substring(0, 200)} />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="article" />
       </Helmet>
       <div className="container mx-auto">
         <div className="grid md:grid-cols-12 md:mx-12 mx-2 gap-6 lg:grid-cols-12 grid-cols-1">
@@ -40,7 +50,7 @@ const SecondHomePage = ({ related, postData }) => {
                 <div>
                   <FacebookSDK />
                   <FacebookShareButton url={url}>
-                    <FacebookIcon logoFillColor={logoFillColor} title={'sharing happiness'} />
+                    <FacebookIcon logoFillColor={logoFillColor} title="sharing happiness" />
                   </FacebookShareButton>
                 </div>
 

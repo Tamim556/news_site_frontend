@@ -2,6 +2,9 @@
 import axios from 'axios';
 import SecondHomePage from '../SecondHomePage/SecondHomePage'
 import { useEffect, useState } from "react";
+
+import { HelmetProvider } from 'react-helmet-async';
+
 import { useLoaderData, useParams } from "react-router-dom"
 // import ExploreMore from "./ExploreMore";
 
@@ -89,7 +92,7 @@ const DetailPage = () => {
       
        
        {/* <SecondHome detail ={detail}></SecodHom> */}
-       <SecondHomePage related={related} postData={postData} data ={data}></SecondHomePage>
+       <HelmetProvider>   <SecondHomePage related={related} postData={postData} data ={data}></SecondHomePage> </HelmetProvider>
        
 
     </div>
