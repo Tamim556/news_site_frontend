@@ -8,6 +8,9 @@ import RightThird from './RightSide/RightThird'
 import NewsTabs from './RightSide/NewsTabs'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import Jatiyo from './RightSide/Jatiyo'
+import National from './RightSide/National'
+import BreakingNewsSlider from '../BreakingNews/BreakingNewsSlider'
 import { Helmet } from 'react-helmet-async'
 
 const Home = () => {
@@ -43,8 +46,8 @@ const Home = () => {
 
   return (
     <div>
-            <Helmet>
-      <title> News Portal Home Page</title>
+      <Helmet>
+        <title>News Portal Home Page</title>
       </Helmet>
       <div className='grid md:grid-cols-12 md:mx-10 ml-4 gap-6 lg:grid-cols-12 grid-cols-1'>
 
@@ -63,10 +66,11 @@ const Home = () => {
 
             <div className='md:col-span-5  col-span-1'>
               <div>
-                <div className='w-[100%] mx-auto h-[250px] mt-5 bg-[#D9D9D9]'>
+              <BreakingNewsSlider/>
+                {/* <div className='w-[100%] mx-auto h-[350px] mt-5 bg-[#D9D9D9]'>
+                 
 
-                </div>
-                <h1 className="box-text1 md:block sm:text-center md:text-start text-sm md:text-xl lg:text-2xl mt-3">কায়রো থেকে মরুভূমিতে রাজধানী সরিয়ে নিচ্ছে মিসর</h1>
+                </div> */}
               </div>
 
             </div>
@@ -80,9 +84,10 @@ const Home = () => {
 
           </div>
 
+
           <Add />
           <div className='grid  md:grid-cols-8 grid-cols-1 pt-4 space-y-2 pb-5'>
-            <div className='md:col-span-5 grid-cols-1 gap-3'>
+            {/* <div className='md:col-span-5 grid-cols-1 gap-3'>
               <h1 className='font-bold text-3xl'>জাতীয়</h1>
               <div className=' border-black py-3 border-b-4'></div>
               <div className='flex flex-1 gap-3 mt-4'>
@@ -104,7 +109,8 @@ const Home = () => {
               </div>
 
 
-            </div>
+            </div> */}
+            <National/>
 
 
             <div className='md:col-span-3 grid-cols-1'>

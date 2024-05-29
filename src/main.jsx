@@ -11,6 +11,7 @@ import {
 // import SecondHomePage from './Pages/SecondHomePage/SecondHomePage';
 import Root from './Root/Root';
 import DetailPage from './Pages/SecondHomePage/DetailPage';
+import Sports from './Pages/Sportspage/Sports';
 import { HelmetProvider } from 'react-helmet-async';
 
 
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
         
 
       },
+      {
+        path: '/স্পোর্টস',
+        element: <Sports/>
+      },
    
       {
         path : '/details/:id',
@@ -42,9 +47,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <HelmetProvider>
-    <React.StrictMode>
+     <React.StrictMode>
     <RouterProvider router={router} />
   
   </React.StrictMode>,
   </HelmetProvider>
+ 
 )

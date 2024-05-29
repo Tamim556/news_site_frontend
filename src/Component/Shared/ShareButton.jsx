@@ -17,12 +17,15 @@ const ShareButton = ({ postId }) => {
         if (window.FB) {
           window.FB.ui({
             method: 'share',
-            href: `https://news-portal-gray.vercel.app/${postId}`,  
+            // href: `https://www.bd24live.com/${postId}`,
+             href: `https://news-portal-gray.vercel.app/${postId}`,
+            //  href: `http://localhost:5173/${postId}`,
+              
           }, function(response){});
         }
       }
 
-
+      // http://localhost:5173/details/2
  
 
   return (
