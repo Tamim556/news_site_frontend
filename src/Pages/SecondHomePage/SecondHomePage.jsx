@@ -10,6 +10,7 @@ import Loader from '../../Component/Loader/Loader';
 import ShareIcons from '../../Component/Shared/ShareIcons';
 import { Link } from 'react-router-dom';
 import ShareButton from '../../Component/Shared/ShareButton';
+import { Helmet } from 'react-helmet-async';
 
 const SecondHomePage = ({ related, postData }) => {
   // const handleClick = () => {
@@ -45,6 +46,12 @@ const SecondHomePage = ({ related, postData }) => {
   
   // https://news-blog-teal.vercel.app/
   return (
+
+    <div>
+      <Helmet>
+      <title> News Portal Details Page</title>
+      </Helmet>
+    
     <div className="container mx-auto">
       <div className="grid md:grid-cols-12 md:mx-12 mx-2 gap-6 lg:grid-cols-12 grid-cols-1">
         <div className="col-span-2 hidden md:block order-last md:order-first">
@@ -98,7 +105,7 @@ const SecondHomePage = ({ related, postData }) => {
           <NewsCard related={related} />
         </div>
       </div>
-    </div>
+    </div></div>
   );
 };
 

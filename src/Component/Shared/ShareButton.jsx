@@ -17,7 +17,7 @@ const ShareButton = ({ postId }) => {
         if (window.FB) {
           window.FB.ui({
             method: 'share',
-            href: `https://news-blog-teal.vercel.app/${postId}`,  
+            href: `https://news-portal-gray.vercel.app/${postId}`,  
           }, function(response){});
         }
       }

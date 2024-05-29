@@ -8,6 +8,7 @@ import RightThird from './RightSide/RightThird'
 import NewsTabs from './RightSide/NewsTabs'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Helmet } from 'react-helmet-async'
 
 const Home = () => {
 
@@ -42,6 +43,9 @@ const Home = () => {
 
   return (
     <div>
+            <Helmet>
+      <title> News Portal Home Page</title>
+      </Helmet>
       <div className='grid md:grid-cols-12 md:mx-10 ml-4 gap-6 lg:grid-cols-12 grid-cols-1'>
 
 
