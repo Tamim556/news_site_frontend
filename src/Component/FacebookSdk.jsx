@@ -1,22 +1,35 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 const FacebookSDK = () => {
   useEffect(() => {
-    if (!document.getElementById('facebook-jssdk')) {
-      const script = document.createElement('script');
-      script.id = 'facebook-jssdk';
-      script.src = 'https://connect.facebook.net/en_US/sdk.js';
-      script.async = true;
-      script.defer = true;
-      script.onload = () => {
+    if (window.FB) {
+      window.FB.XFBML.parse();
+    } else {
+      window.fbAsyncInit = function() {
         window.FB.init({
-          appId: 'YOUR_APP_ID',  // Replace 'YOUR_APP_ID' with your actual Facebook App ID
-          autoLogAppEvents: true,
-          xfbml: true,
-          version: 'v10.0'
+          appId      : 'YOUR_APP_ID', // Replace 'YOUR_APP_ID' with your actual Facebook App ID
+          cookie     : true,
+          xfbml      : true,
+          version    : 'v10.0'
         });
+        window.FB.AppEvents.logPageView();
       };
-      document.body.appendChild(script);
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         js.onload = () => {
+           window.FB.init({
+             appId: '889877846240065',  // Replace 'YOUR_APP_ID' with your actual Facebook App ID
+             autoLogAppEvents: true,
+             xfbml: true,
+             version: 'v10.0'
+           });
+         };
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
     }
   }, []);
 
