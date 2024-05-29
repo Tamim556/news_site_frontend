@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import logo from '../../assets/Images/news_logo.png'
 import { Link } from 'react-router-dom';
+
+
+<script src="https://jsc.mgid.com/site/556728.js" async>
+</script>
+
 const Naavbar = () => {
 
 
