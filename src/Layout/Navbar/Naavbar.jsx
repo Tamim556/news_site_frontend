@@ -61,7 +61,7 @@ const Naavbar = () => {
         <nav className="bg-gray-100 flex text-gray-800 items-center justify-between flex-wrap pb-2 px-5">
           <div>
             {/* <span className="font-semibold text-1xl text-gray-900">Mews </span> */}
-            <img className='h-[80px] w-[70%] py-1 rounded-md' src={logo} alt="logo" />
+           <Link to='/'> <img className='h-[80px] w-[70%] py-1 rounded-md' src={logo} alt="logo" /></Link>
           </div>
           <div className="block lg:hidden">
             <button
