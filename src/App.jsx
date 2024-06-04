@@ -1,35 +1,59 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import HelmetMetaData from "./HelmetData";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+// Define BlogDetail as a functional component
+const BlogDetail = ({ classes, blog }) => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <HelmetMetaData
+      title={blog.title}
+      description={blog.title + " " + blog.author.name}
+      image={blog.gallery[0]}
+    />
+  );
+};
 
-export default App
+const App = ({ classes }) => {
+  return (
+    <div className={classes.root}>
+      <HelmetMetaData />
+      <Switch>
+        <Route path="/about" component={AboutUs} />
+        <Route path="/blogs" component={Blog} />
+        {/* Add a route for BlogDetail */}
+        <Route
+          path="/blog/:id"
+          render={(props) => <BlogDetail {...props} classes={classes} />}
+        />
+      </Switch>
+      <Popper className={classes.socialMediaPopper} open={true} transition>
+        <FacebookShareButton
+          url={"http://www.camperstribe.com"}
+          quote={"CampersTribe - World is yours to explore"}
+          hashtag="#camperstribe"
+          className={classes.socialMediaButton}
+        >
+          <FacebookIcon size={36} />
+        </FacebookShareButton>
+        <TwitterShareButton
+          url={"http://www.camperstribe.com"}
+          title={"CampersTribe - World is yours to explore"}
+          hashtag="#camperstribe"
+          className={classes.socialMediaButton}
+        >
+          <TwitterIcon size={36} />
+        </TwitterShareButton>
+        <WhatsappShareButton
+          url={"http://www.camperstribe.com"}
+          title={"CampersTribe - World is yours to explore"}
+          separator=":: "
+          className={classes.socialMediaButton}
+        >
+          <WhatsappIcon size={36} />
+        </WhatsappShareButton>
+      </Popper>
+    </div>
+  );
+};
+
+export default App;
